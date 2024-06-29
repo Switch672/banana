@@ -1,7 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c6wd6377lwhrx"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_7fqhq"]
-[ext_resource type="PackedScene" uid="uid://cgo2yc5qqw0u5" path="res://yes.glb" id="2_34hj4"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_k5ji5"]
 
@@ -32,9 +31,6 @@ mesh = SubResource("PlaneMesh_1hjrk")
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80294, 0)
 script = ExtResource("1_7fqhq")
-
-[node name="yes" parent="CharacterBody3D" instance=ExtResource("2_34hj4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33417, -1.80294, -0.751058)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_ygciq")
