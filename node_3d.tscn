@@ -41,6 +41,8 @@ transform = Transform3D(1, 0, 0, 0, 0.951094, 0.308901, 0, -0.308901, 0.951094, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 mesh = SubResource("CapsuleMesh_iuqsm")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/MeshInstance3D"]
+
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
