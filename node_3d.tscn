@@ -32,7 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80294, 0)
 script = ExtResource("1_7fqhq")
 
 [node name="yes" parent="CharacterBody3D" instance=ExtResource("2_34hj4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.362247, -1.80294, 1.50392)
+transform = Transform3D(-6.18724e-09, 0, 0.141548, 0, 0.141548, 0, -0.141548, 0, -6.18724e-09, 0.229104, -0.782693, 0.207072)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_ygciq")
