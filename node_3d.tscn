@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6wd6377lwhrx"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_7fqhq"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_k5ji5"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1hjrk"]
+size = Vector2(20, 20)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ygciq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_iuqsm"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 8, 9)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_k5ji5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_1hjrk")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80294, 0)
+script = ExtResource("1_7fqhq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_ygciq")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.951094, 0.308901, 0, -0.308901, 0.951094, 0, 1.27483, 2.19817)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_iuqsm")
